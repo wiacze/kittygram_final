@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'token')
 
-DEBUG = os.getenv('DEBUG', False)
+DEBUG = bool(os.getenv('DEBUG') == 'True')
 
 SERVER_IP = os.getenv('SERVER_IP', '127.0.0.1')
 DOMAIN = os.getenv('DOMAIN', 'localhost')
